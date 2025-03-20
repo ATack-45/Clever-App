@@ -1,0 +1,17 @@
+
+body {
+    background-color: #1C1C1F;
+    padding: 20px;
+}
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.queue table, .queue th, .queue td {
+    border: 1px solid #205723;
+}
+.queue th, .queue td {
+    padding: 10px;
+}

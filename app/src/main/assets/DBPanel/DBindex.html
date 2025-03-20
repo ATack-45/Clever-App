@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/student.css">
+    <link rel="stylesheet" href="styles/minipage.css">
+    <script src="https://kit.fontawesome.com/33ea8ad391.js" crossorigin="anonymous"></script>
+    <script src="chart.js/dist/chart.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.11/signalr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-gradient"></script>
+    <script src="student.js"></script>
+    <script src="confetti.js"></script>
+<!--    <script src="bundle.js"></script>-->
+</head>
+
+<body>
+
+    <nav id="side">
+        <div class="top">
+            <i class="fa-solid fa-database fa-2xl"></i>
+            <h3>Software & Game Development</h3>
+        </div>
+        <section>
+            <h3>Main</h3>
+            <button tabindex="-1" id="dashboardBtn" class="selected">
+                <i class="fa-solid fa-table-columns fa-lg"></i>
+                <p>Dashboard</p>
+            </button>
+            <button tabindex="-1" id="studentsBtn">
+                <i class="fa-solid fa-users fa-lg"></i>
+                <p>Students</p>
+            </button>
+        </section>
+        <section>
+            <h3>Misc</h3>
+            <button tabindex="-1" id="settingsBtn">
+                <i class="fa-solid fa-cog fa-lg"></i>
+                <p>Settings</p>
+            </button>
+        </section>
+        <section>
+            <h3>Example</h3>
+            <button tabindex="-1">
+                <i class="fa-solid fa-expand fa-lg"></i>
+                <p>Example</p>
+            </button>
+            <button tabindex="-1">
+                <i class="fa-solid fa-expand fa-lg"></i>
+                <p>Example</p>
+            </button>
+        </section>
+    </nav>
+    <main>
+        <div id="dashboardPage" class="shown">
+            <div class="graph">
+                <h2>Weekly Activity</h2>
+                <h4>Updated 00s Ago</h4>
+                <div class="chips">
+                    <button id="groupAll" class="selected">ALL</button>
+                    <button id="groupAM">AM</button>
+                    <button id="groupPM">PM</button>
+                </div>
+                <div class="graph"><canvas id="weeklyActivity"></canvas></div>
+            </div>
+            <script src="scripts/weeklyActivity.js" defer></script>
+
+            <div class="current">
+                <h2>Currently Out</h2>
+                <h4>Updated 00s Ago</h4>
+
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Reason</th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody id="coutTable"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="leaderboard">
+                <h2>Leaderboard</h2>
+                <h4>Updated 00s Ago</h4>
+            </div>
+            <div class="today">
+                <h2>Activity Today</h2>
+                <h4>Updated 00s Ago</h4>
+            </div>
+        </div>
+        <script src="scripts/weeklyActivity.js" defer></script>
+        </div>
+        <div id="studentsPage">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Status</th>
+                        <th>NFC</th>
+                        <th>Last Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div id="settingsPage">
+
+        </div>
+        <div id="miniPage" class="">
+            <div>
+                <i class="fa-solid fa-user fa-4x"></i>
+                <div class="title">
+                    <h2>Student Name Here</h2>
+                    <h2 class="status in">IN</h2>
+                </div>
+                <div class="title">
+                    <h4>123</h4>
+                    <h4>040169017c0503</h4>
+                </div>
+                <button id="force-in">Force Change</button>
+                <table>
+
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/client.js" defer></script>
+</body>
+
+</html>

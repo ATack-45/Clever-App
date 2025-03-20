@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="75dp"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:translationY="-30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MainLayout">
+
+        <!-- Container for the three cards -->
+        <LinearLayout
+            android:id="@+id/cardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:weightSum="3">
+
+            <!-- Card 1 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                app:cardBackgroundColor="#303030"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:id="@+id/card1Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Spacer between cards -->
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="0dp" />
+
+            <!-- Card 2 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                app:cardBackgroundColor="#303030"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:id="@+id/card2Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Spacer between cards -->
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="0dp" />
+
+            <!-- Card 3 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                app:cardBackgroundColor="#303030"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:id="@+id/card3Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/MainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="204dp"
+        tools:layout_editor_absoluteY="76dp">
+
+
+
+        <LinearLayout
+            android:id="@+id/nameLayout"
+            android:layout_width="450dp"
+            android:layout_height="225dp"
+            android:layout_marginStart="432dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/breather_border"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline"
+            tools:ignore="MissingConstraints">
+
+            <ImageButton
+                android:id="@+id/closeButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="16dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:contentDescription="Close"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_close"
+                android:translationX="400dp"
+                android:translationY="-10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/name1_Label"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="Safe:"
+                android:textColor="#AFC7A2"
+                android:textSize="18sp"
+                android:translationY="0dp" />
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#AFC7A2"
+                android:textSize="18sp"
+                android:translationY="0dp" />
+
+            <TextView
+                android:id="@+id/name2_Label"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="Breather:"
+                android:textColor="#AFC7A2"
+                android:textSize="18sp"
+                android:translationY="0dp" />
+
+            <TextView
+                android:id="@+id/nameTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="#AFC7A2"
+                android:textSize="18sp"
+                android:translationY="0dp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="120dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_row"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="NotSibling">
+
+
+            <!-- Initially set to 100% -->
+
+            <TextView
+                android:id="@+id/playingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="Spotify"
+                android:textColor="#AFC7A2"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/totalTime"
+                app:layout_constraintHorizontal_bias="0.521"
+                app:layout_constraintStart_toStartOf="@+id/currentTime"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="384dp"
+                android:layout_marginTop="8dp"
+                android:text="00:00"
+                android:textColor="#AFC7A2"
+                app:layout_constraintStart_toEndOf="@+id/currentTime"
+                app:layout_constraintTop_toTopOf="@+id/songProgressBar" />
+
+            <TextView
+                android:id="@+id/currentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="420dp"
+                android:layout_marginTop="8dp"
+                android:text="00:00"
+                android:textColor="#AFC7A2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/songProgressBar" />
+
+            <SeekBar
+                android:id="@+id/songProgressBar"
+                android:layout_width="388dp"
+                android:layout_height="39dp"
+                android:max="100"
+                app:layout_constraintEnd_toStartOf="@+id/totalTime"
+                app:layout_constraintHorizontal_bias="0.274"
+                app:layout_constraintStart_toEndOf="@+id/currentTime"
+                app:layout_constraintTop_toBottomOf="@+id/playingTextView"
+                android:progressTint="#AFC7A2"
+                android:thumbTint="#AFC7A2"/>
+
+            <TextView
+                android:id="@+id/IP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="text"
+                android:text="Name"
+                android:textColor="#AFC7A2"
+
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/calendarCard"
+            android:layout_width="1230dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="80dp"
+            android:background="#303030"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:elevation="16dp"
+            android:focusable="true"
+            android:padding="16dp"
+            app:cardBackgroundColor="#303030"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline">
+
+
+            <ImageView
+                android:id="@+id/collapseIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/cal_ico"
+                android:visibility="gone" />
+
+            <HorizontalScrollView
+                android:id="@+id/calView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#303030"
+                android:elevation="-8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+
+
+                    >
+
+                    <!-- Monday Section -->
+                    <LinearLayout
+                        android:id="@+id/mondaySection"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        android:background="#303030"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/mondayTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="true"
+                            android:text="Monday"
+                            android:textColor="#AFC7A2"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ScrollView
+                            android:id="@+id/mondayScroll"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:clickable="true">
+
+                            <LinearLayout
+                                android:id="@+id/mondayEventList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:orientation="vertical" />
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <!-- Tuesday Section -->
+                    <LinearLayout
+                        android:id="@+id/tuesdaySection"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        android:background="#303030"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/tuesdayTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Tuesday"
+                            android:textColor="#AFC7A2"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ScrollView
+                            android:id="@+id/tuesdayScroll"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:id="@+id/tuesdayEventList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <!-- Wednesday Section -->
+                    <LinearLayout
+                        android:id="@+id/wednesdaySection"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        android:background="#303030"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/wednesdayTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Wednesday"
+                            android:textColor="#AFC7A2"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ScrollView
+                            android:id="@+id/wednesdayScroll"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:id="@+id/wednesdayEventList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <!-- Thursday Section -->
+                    <LinearLayout
+                        android:id="@+id/thursdaySection"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        android:background="#303030"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/thursdayTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Thursday"
+                            android:textColor="#AFC7A2"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ScrollView
+                            android:id="@+id/thursdayScroll"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:id="@+id/thursdayEventList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <!-- Friday Section -->
+                    <LinearLayout
+                        android:id="@+id/fridaySection"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:background="#303030"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/fridayTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Friday"
+                            android:textColor="#AFC7A2"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ScrollView
+                            android:id="@+id/fridayScroll"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:id="@+id/fridayEventList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </ScrollView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
