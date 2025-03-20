@@ -1,1 +1,1 @@
-summary
+This project is an Android application that integrates with various APIs to provide a dynamic and interactive dashbord for the software and game developmet class. The app collects data from sources related to the class to convienently display important information like daily activities, student tracker information , and due dates to be easily availible on the CleverTouch class display.
